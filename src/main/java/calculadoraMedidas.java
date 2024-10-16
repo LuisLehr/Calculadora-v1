@@ -51,6 +51,8 @@ public class calculadoraMedidas {
                 System.out.print("Digite o valor a ser convertido: ");
                 valor = Teclado.nextDouble();
 
+            }        
+
                 // Realiza a conversao
                 try {
                     double resultado = converterUnidades(valor, unidadeOrigem, unidadeSaida);
@@ -61,13 +63,12 @@ public class calculadoraMedidas {
                     System.out.println(e.getMessage());
                 }
 
-
                 // Pergunta se o usuário deseja continuar
                 System.out.print("Deseja realizar outra conversão? \nDigite 1 para continuar \nDigite 0 para sair: ");
                 op = Teclado.nextInt();
+
             }
         }
-    }
 
     // Método para converter as unidades
     public double converterUnidades(double valor, String unidadeOrigem, String unidadeSaida){
@@ -97,3 +98,4 @@ public class calculadoraMedidas {
                unidade.equals("DAM") || unidade.equals("HM") || unidade.equals("KM");
     }
 }
+
